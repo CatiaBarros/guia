@@ -19,19 +19,13 @@
   font-size: 16px;
 }
 
-/* Datas (h3) com Firme */
+/* Datas com Firme */
 .tl-timeline h3.tl-headline-date {
   font-family: 'Firme', serif !important;
   font-weight: 700;
 }
 
-/* Números da cronologia com Firme */
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-text h2.tl-headline {
-  font-family: 'Firme', serif !important;
-  font-weight: 700;
-}
-
-/* === SETAS DE NAVEGAÇÃO === */
+/* Setas com Firme */
 .tl-slidenav-next,
 .tl-slidenav-previous {
   font-family: 'Firme', serif !important;
@@ -40,29 +34,30 @@
   border-radius: 8px;
 }
 
+/* Cor das setas */
 .tl-slidenav-next .tl-slidenav-icon::before,
 .tl-slidenav-previous .tl-slidenav-icon::before {
   color: #8d8d8d !important;
 }
 
-/* === ESPAÇAMENTO E LAYOUT === */
-.tl-timeline .tl-text-content-container {
-  padding: 20px;
+/* === OCULTAR bandeirinhas (flags) da timeline === */
+.tl-timemarker-content-container {
+  display: none !important;
+}
+
+/* === ALTURA FLEXÍVEL PARA O SLIDE === */
+.tl-slide-container {
+  height: 90vh !important;
+  max-height: 90vh !important;
 }
 
 .tl-timeline .tl-slide {
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   height: 100% !important;
   max-height: 100% !important;
   overflow: hidden;
-}
-
-/* Container geral do slide com altura aumentada */
-.tl-slide-container {
-  height: 800px !important;
-  max-height: 800px !important;
+  margin-bottom: 30px;
 }
 
 /* Divisão imagem/texto */
@@ -71,7 +66,6 @@
   overflow: hidden;
   padding: 0;
 }
-
 .tl-slide .tl-text-content-container {
   flex: 1 1 55%;
   overflow: auto;
@@ -88,19 +82,19 @@
   object-fit: cover;
 }
 
-/* Espaçamento entre eventos na cronologia */
+/* Espaçamento entre eventos na linha do tempo */
 .tl-timemarker {
   margin-right: 60px !important;
 }
 
-/* === TIMENAV (altura) === */
+/* === OCULTAR barra de zoom (se necessário) === */
+.tl-menubar {
+  display: none !important;
+}
+
+/* === ALTURA REDUZIDA DA TIMENAV === */
 .tl-timenav,
 .tl-timenav-background,
 .tl-timenav-outer {
   height: 60px !important;
-}
-
-/* === OCULTAR barra de zoom === */
-.tl-menubar {
-  display: none !important;
 }
