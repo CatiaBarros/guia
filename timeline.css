@@ -7,7 +7,7 @@
 .tl-timeline h4,
 .tl-timeline h5,
 .tl-timeline h6 {
-  font-family: 'Firme', serif !important;
+  font-family: 'Firme', sans-serif !important;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -32,20 +32,27 @@
   margin-bottom: 40px;
 }
 
-/* Aumentar altura da barra de tempo */
+/* BARRA DE TEMPO — tornar mais fina */
 .tl-timeline .tl-timenav,
 .tl-timeline .tl-timenav-background,
-.tl-timeline .tl-timenav-outer {
-  height: 120px !important;
+.tl-timeline .tl-timenav-outer,
+.tl-timeline .tl-timenav-slider,
+.tl-timeline .tl-timenav-slider-background,
+.tl-timeline .tl-timeaxis,
+.tl-timeline .tl-timenav-line {
+  height: 10px !important;
+  min-height: 10px !important;
+  max-height: 10px !important;
+  overflow: hidden;
 }
 
-/* Melhorar visual dos marcadores */
-.tl-timemarker .tl-timemarker-content-container {
-  background-color: #000;
-  color: white;
-  border-radius: 4px;
-  padding: 5px 10px;
-  font-family: 'Firme', serif;
+/* Esconder marcadores e thumbnails */
+.tl-timeline .tl-timemarker,
+.tl-timeline .tl-timeaxis-background,
+.tl-timeline .tl-timeaxis-tick,
+.tl-timeline .tl-timemarker-media-container,
+.tl-timeline .tl-timemarker-content-container {
+  display: none !important;
 }
 
 /* Navegação lateral (setas) */
