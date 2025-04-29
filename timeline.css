@@ -7,7 +7,7 @@
 .tl-timeline h4,
 .tl-timeline h5,
 .tl-timeline h6 {
-  font-family: 'Firme', serif !important;
+  font-family: 'Blacker Pro', serif !important;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -32,21 +32,21 @@
   margin-bottom: 40px;
 }
 
+/* Ocultar a barra de zoom */
+.tl-menubar {
+  display: none !important;
+}
+
+/* Ocultar todos os marcadores da timeline */
+.tl-timemarker {
+  display: none !important;
+}
+
 /* Ajuste de altura da barra de tempo */
 .tl-timenav,
 .tl-timenav-background,
 .tl-timenav-outer {
   height: 60px !important;
-}
-
-/* Remover a barra de zoom */
-.tl-menubar {
-  display: none !important;
-}
-
-/* Remover todos os marcadores da timeline */
-.tl-timemarker {
-  display: none !important;
 }
 
 /* Navegação lateral (setas) */
@@ -56,4 +56,36 @@
   padding: 8px;
   border-radius: 8px;
   font-family: 'Firme', serif;
+}
+
+/* ====== Adaptação da parte de cima para evitar scroll ====== */
+
+/* Limita altura dos slides e evita scroll geral */
+.tl-slide {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* Divide altura entre imagem e texto */
+.tl-slide .tl-media-content-container,
+.tl-slide .tl-text-content-container {
+  max-height: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Imagens adaptativas */
+.tl-slide .tl-media img,
+.tl-slide .tl-media iframe,
+.tl-slide .tl-media video {
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Texto adaptável e com scroll se necessário */
+.tl-text-content {
+  max-height: 100%;
+  overflow: auto;
 }
