@@ -29,11 +29,13 @@
   color: black !important;
 }
 
+/* Datas com Firme */
 .tl-timeline h3.tl-headline-date {
   font-family: 'Firme', serif !important;
   font-weight: 700;
 }
 
+/* Setas com Firme */
 .tl-slidenav-next,
 .tl-slidenav-previous {
   font-family: 'Firme', serif !important;
@@ -47,27 +49,37 @@
   color: #8d8d8d !important;
 }
 
-/* === ESTRUTURA E LAYOUT === */
+/* === SLIDE STRUCTURE === */
 .tl-slide-container {
   height: 90vh !important;
   max-height: 90vh !important;
 }
 
-.tl-slide-content {
+/* Corrigir o espaçamento no topo do slide */
+.tl-slide-content,
+.tl-slide .tl-text,
+.tl-slide .tl-text-content-container {
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
 
+.tl-slide .tl-text-content h2,
+.tl-slide .tl-text-content p {
+  margin-top: 0 !important;
+}
+
+/* Layout geral */
 .tl-timeline .tl-slide {
   display: flex !important;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100% !important;
   max-height: 100% !important;
   overflow: hidden;
   margin-bottom: 30px;
 }
 
+/* Partes imagem/texto */
 .tl-slide .tl-media-content-container {
   flex: 0 0 auto;
   padding: 0;
@@ -81,7 +93,7 @@
   padding: 20px;
 }
 
-/* === IMAGENS E LEGENDA === */
+/* === IMAGEM + CRÉDITOS === */
 .tl-slide .tl-media img,
 .tl-slide .tl-media iframe,
 .tl-slide .tl-media video {
@@ -99,7 +111,7 @@
   max-height: 100% !important;
 }
 
-/* Mostrar sempre legenda e crédito */
+/* Mostrar sempre legendas e créditos */
 .tl-slide .tl-media .tl-caption,
 .tl-slide .tl-media .tl-credit {
   display: block !important;
@@ -109,7 +121,7 @@
   text-align: center;
 }
 
-/* === TIMELINE NAV === */
+/* === TIMENAV & ZOOM === */
 .tl-timemarker {
   margin-right: 60px !important;
 }
@@ -125,8 +137,6 @@
 }
 
 /* === MEDIA QUERIES === */
-
-/* Telemóvel */
 @media (max-width: 767px) {
   .tl-slide {
     flex-direction: column !important;
@@ -146,7 +156,6 @@
   }
 }
 
-/* Desktop — mais altura para imagem */
 @media (min-width: 768px) {
   .tl-slide .tl-media-content-container {
     max-height: 50vh;
