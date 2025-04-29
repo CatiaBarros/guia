@@ -1,6 +1,6 @@
 @import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
 
-/* === FONTES PERSONALIZADAS === */
+/* === FONTES === */
 .tl-timeline h1,
 .tl-timeline h2,
 .tl-timeline h4,
@@ -25,140 +25,94 @@
   line-height: 1.4;
 }
 
+/* Datas com Firme */
 .tl-timeline h3.tl-headline-date {
   font-family: 'Firme', serif !important;
   font-weight: 700;
 }
 
-/* === SLIDE STRUCTURE === */
+/* Setas com Firme */
+.tl-slidenav-next,
+.tl-slidenav-previous {
+  font-family: 'Firme', serif !important;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Cor das setas */
+.tl-slidenav-next .tl-slidenav-icon::before,
+.tl-slidenav-previous .tl-slidenav-icon::before {
+  color: #8d8d8d !important;
+}
+
+/* === OCULTAR bandeirinhas === */
+.tl-timemarker-content-container {
+  display: none !important;
+}
+
+/* === OCULTAR barra de zoom === */
+.tl-menubar {
+  display: none !important;
+}
+
+/* === ALTURA reduzida da timenav === */
+.tl-timenav,
+.tl-timenav-background,
+.tl-timenav-outer {
+  height: 60px !important;
+}
+
+/* === SLIDE CONFIG GERAL === */
 .tl-slide-container {
   height: 90vh !important;
   max-height: 90vh !important;
-  padding: 20px !important; /* Adiciona espaço geral dentro do slide */
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .tl-timeline .tl-slide {
-  display: flex !important;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 10px; /* espaço entre texto e imagem */
   height: 100% !important;
   max-height: 100% !important;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 10px !important;
 }
 
-/* Limpar padding/margem dos content internos */
-.tl-slide-content,
-.tl-slide .tl-text,
-.tl-slide .tl-text-content-container,
-.tl-timeline .tl-slide .tl-slide-content {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Divisão imagem/texto */
-.tl-slide .tl-media-content-container {
-  flex: 0 0 auto;
-  padding: 20px !important; /* Padding à volta da imagem */
-  max-height: 35vh;
-  overflow: visible;
-}
-
+/* === TEXTO === */
 .tl-slide .tl-text-content-container {
   flex: 1 1 auto;
   overflow: auto;
-  padding: 40px 20px 40px 20px !important; /* Cima, direita, baixo, esquerda */
+  padding: 20px 40px 20px 20px !important; /* mais espaço à direita */
 }
 
-/* === IMAGENS === */
+/* === IMAGEM === */
+.tl-slide .tl-media-content-container {
+  flex: 1 1 auto;
+  max-height: 30vh !important; /* imagem mais "baixa" */
+  overflow: hidden;
+  padding: 10px !important;
+}
+
+/* Imagem visível, sem corte, sem sombra */
 .tl-slide .tl-media img,
 .tl-slide .tl-media iframe,
-.tl-slide .tl-media video,
-.tl-media-content .tl-media img,
-.tl-media-content .tl-media iframe,
-.tl-media-content .tl-media video {
+.tl-slide .tl-media video {
   width: 100%;
-  height: auto;
-  object-fit: scale-down !important;
-  max-height: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: none !important;
   border: none !important;
-  box-shadow: none !important;
-  background: none !important;
 }
 
-/* Limpar wrappers também */
-.tl-slide .tl-media-content,
-.tl-slide .tl-media-content-container,
-.tl-slide .tl-media {
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-}
-
-/* Créditos e legendas */
-.tl-slide .tl-media .tl-caption,
-.tl-slide .tl-media .tl-credit {
-  display: block !important;
-  font-size: 12px;
-  color: #666;
-  margin-top: 5px;
-  text-align: center;
-}
-
-/* === SETAS VISÍVEIS === */
-.tl-slidenav-next,
-.tl-slidenav-previous {
-  background: none !important;
-  box-shadow: none !important;
-  filter: none !important;
-  backdrop-filter: none !important;
-  z-index: 10;
-}
-
-.tl-slidenav-icon::before {
-  color: #8d8d8d !important;
-  background: none !important;
+/* Remover sombra específica usada em vídeos ou media-wrapper */
+.tl-slide .tl-media-content .tl-media {
   box-shadow: none !important;
 }
 
-/* === REMOVER TIMENAV, FLAGS, ZOOM === */
-.tl-timenav,
-.tl-timenav-outer,
-.tl-timenav-background,
-.tl-timeaxis,
-.tl-menubar,
-.tl-timemarker,
-.tl-timemarker-active,
-.tl-timegroup,
-.tl-timemarker-content-container,
-.tl-timemarker-media-container,
-.tl-timeaxis-tick,
-.tl-timeaxis-background {
-  display: none !important;
-  height: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none;
-}
-
-/* === MOBILE === */
-@media (max-width: 767px) {
-  .tl-slide {
-    flex-direction: column !important;
-  }
-
-  .tl-slide .tl-media-content-container {
-    max-height: 40vh;
-  }
-
-  .tl-slide .tl-text-content-container {
-    max-height: 60vh;
-    overflow-y: auto;
-  }
-
-  .tl-slide .tl-text-content-container p {
-    font-size: 15px;
-  }
+/* === Espaçamento entre eventos na timeline === */
+.tl-timemarker {
+  margin-right: 60px !important;
 }
