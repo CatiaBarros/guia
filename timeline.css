@@ -26,7 +26,7 @@
   line-height: 1.4;
 }
 
-/* Garantir que <p> dentro de .tl-text-content também ficam a preto */
+/* Parágrafos dentro de .tl-text-content */
 .tl-timeline .tl-slide .tl-text-content p {
   color: black !important;
 }
@@ -52,25 +52,24 @@
   color: #8d8d8d !important;
 }
 
-/* === OCULTAR bandeirinhas === */
+/* OCULTAR bandeirinhas */
 .tl-timemarker-content-container {
   display: none !important;
 }
 
-/* === ALTURA FLEXÍVEL DO SLIDE === */
+/* ALTURA FLEXÍVEL DO SLIDE */
 .tl-slide-container {
   height: 90vh !important;
   max-height: 90vh !important;
 }
 
-/* Ajustes finos no conteúdo da slide */
+/* Ajustes do slide */
 .tl-slide-content {
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
 
-/* Layout da slide */
-.tl-timeline .tl-slide {
+.tl-slide {
   display: flex !important;
   flex-direction: column;
   justify-content: space-between;
@@ -80,11 +79,12 @@
   margin-bottom: 30px;
 }
 
-/* Divisão imagem/texto com mais espaço para texto */
+/* MEDIA E TEXTO */
 .tl-slide .tl-media-content-container {
   flex: 0 0 auto;
   padding: 0;
   max-height: 35vh;
+  overflow: visible;
 }
 
 .tl-slide .tl-text-content-container {
@@ -93,7 +93,7 @@
   padding: 20px;
 }
 
-/* Imagem visível, sem corte e com menor altura */
+/* Imagem visível e com legendas */
 .tl-slide .tl-media img,
 .tl-slide .tl-media iframe,
 .tl-slide .tl-media video {
@@ -103,10 +103,19 @@
   max-height: 100%;
 }
 
-/* Garante que o contentor da imagem não força altura */
 .tl-media-content {
   height: auto !important;
   max-height: 100% !important;
+}
+
+/* Mostrar legendas e créditos */
+.tl-media .tl-caption,
+.tl-media .tl-credit {
+  display: block !important;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  text-align: center;
 }
 
 /* Espaçamento entre eventos na timeline */
@@ -114,14 +123,43 @@
   margin-right: 60px !important;
 }
 
-/* === OCULTAR barra de zoom === */
+/* OCULTAR barra de zoom */
 .tl-menubar {
   display: none !important;
 }
 
-/* === ALTURA reduzida da timenav === */
+/* ALTURA reduzida da timenav */
 .tl-timenav,
 .tl-timenav-background,
 .tl-timenav-outer {
   height: 60px !important;
+}
+
+/* === MEDIA QUERIES === */
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .tl-slide {
+    flex-direction: column !important;
+  }
+
+  .tl-slide .tl-media-content-container {
+    max-height: 40vh;
+  }
+
+  .tl-slide .tl-text-content-container {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .tl-slide .tl-text-content-container p {
+    font-size: 15px;
+  }
+}
+
+/* DESKTOP — mais altura para imagem */
+@media (min-width: 768px) {
+  .tl-slide .tl-media-content-container {
+    max-height: 50vh;
+  }
 }
