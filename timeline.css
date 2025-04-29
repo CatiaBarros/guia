@@ -1,13 +1,13 @@
 @import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
 
-/* === FONTES === */
+/* === FONTES PERSONALIZADAS === */
 .tl-timeline h1,
 .tl-timeline h2,
 .tl-timeline h3,
 .tl-timeline h4,
 .tl-timeline h5,
 .tl-timeline h6 {
-  font-family: 'Firme', sans-serif !important;
+  font-family: 'Firme', serif !important;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -23,7 +23,7 @@
   font-size: 16px;
 }
 
-/* === ESPAÇAMENTO === */
+/* === ESPAÇAMENTO DOS SLIDES === */
 .tl-timeline .tl-text-content-container {
   padding: 30px;
 }
@@ -32,7 +32,7 @@
   margin-bottom: 40px;
 }
 
-/* === BARRA DE TEMPO FINA === */
+/* === ALTURA DA BARRA DE TEMPO REDUZIDA === */
 .tl-timeline .tl-timenav,
 .tl-timeline .tl-timenav-background,
 .tl-timeline .tl-timenav-outer,
@@ -45,23 +45,27 @@
   overflow: hidden !important;
 }
 
-/* === LINHA TEMPORAL DISCRETA === */
+/* === LINHA DO TEMPO VISÍVEL COMO TRAÇO === */
 .tl-timeline .tl-timeaxis {
   height: 2px !important;
-  background-color: #ccc !important;
+  background-color: #999 !important;
   margin-top: 4px !important;
 }
 
-/* === ESCONDER MARCADORES E MINIATURAS === */
+.tl-timeline .tl-timeaxis .tl-timeaxis-tick:before {
+  background-color: #999 !important;
+  height: 6px;
+  width: 1px;
+}
+
+/* === ESCONDER MARCADORES (BLOCOS, TEXTO, ICONES) === */
 .tl-timeline .tl-timemarker,
 .tl-timeline .tl-timemarker-content,
 .tl-timeline .tl-timemarker-content-container,
 .tl-timeline .tl-timemarker-media-container,
 .tl-timeline .tl-timemarker-text,
 .tl-timeline .tl-timemarker-text h2,
-.tl-timeline .tl-timemarker-icon,
-.tl-timeline .tl-timeaxis-background,
-.tl-timeline .tl-timeaxis-tick {
+.tl-timeline .tl-timemarker-icon {
   display: none !important;
   visibility: hidden !important;
   height: 0 !important;
@@ -71,7 +75,6 @@
   border: none !important;
   background: transparent !important;
   box-shadow: none !important;
- max-height: 7px !important;
 }
 
 /* === NAVEGAÇÃO LATERAL (SETAS) === */
