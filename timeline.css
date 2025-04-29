@@ -69,9 +69,9 @@
 .tl-media-content-container img,
 .tl-media-content-container video,
 .tl-media-content-container iframe {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
-  object-fit: contain;
+  object-fit: scale-down;
   box-shadow: none !important;
   border: none !important;
   display: block;
@@ -96,7 +96,6 @@
   z-index: 1000 !important;
   opacity: 1 !important;
   pointer-events: auto !important;
-  top: 40%;
 }
 
 .tl-slidenav-icon::before {
@@ -126,7 +125,7 @@
   .tl-media-content-container video,
   .tl-media-content-container iframe {
     width: 100%;
-    max-height: 60vh;
+    max-height: 55vh;
     object-fit: contain;
   }
 }
