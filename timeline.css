@@ -1,93 +1,52 @@
-/* ======= RESET E BASE ======= */
-.tl-slide {
-  padding: 0 !important;
-}
+/* TimelineJS - Mobile Adjustments and Cleanup */
 
-.tl-slide-content {
-  padding: 0 !important;
-}
-
-/* ======= LAYOUT DO SLIDE (TEXTO + IMAGEM) ======= */
+/* Reset all paddings/margins that may interfere */
+.tl-slide-content,
 .tl-slide .content-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  padding-right: 20px;
-}
-
-.tl-text {
-  flex: 1.5;
   padding: 0 !important;
+  margin: 0 auto !important;
 }
 
+/* Make sure the media wrapper uses all available width */
 .tl-media-content-container {
-  flex: 1;
+  width: 100% !important;
+  max-height: unset !important;
+  height: auto !important;
   padding: 0 !important;
+  margin: 0 auto;
 }
 
-/* Reduz distância vertical entre texto e imagem */
-.tl-text-content {
-  margin-bottom: 12px !important;
-}
-
-/* ======= IMAGEM ======= */
+/* Ensure media scales properly */
 .tl-media-content-container img,
 .tl-media-content-container video,
 .tl-media-content-container iframe {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 100% !important;
+  height: auto !important;
+  max-height: unset !important;
+  object-fit: contain !important;
+  display: block;
   box-shadow: none !important;
   border: none !important;
 }
 
-/* Remove sombras ou efeitos */
+/* Remove unwanted shadows below images */
 .tl-media-content-container .media-shadow:before,
 .tl-media-content-container .media-shadow:after {
   display: none !important;
 }
 
-/* ======= TEXTO ======= */
-.tl-headline {
-  font-size: 2rem;
-  line-height: 2.4rem;
-  margin-bottom: 12px;
+/* Avoid spacing from other wrappers */
+.tl-slide .content-container.layout-text-media .media {
+  margin: 0 auto !important;
+  padding: 0 !important;
 }
 
-.tl-text-content p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-/* ======= REMOVER FLAGS (MARCADORES TEMPORAIS) ======= */
-.tl-timemarker {
-  display: none !important;
-}
-
-/* ======= SETAS ======= */
-.tl-slidenav-previous,
-.tl-slidenav-next {
-  z-index: 10;
-}
-
-.tl-slidenav-icon::before {
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-/* Adiciona espaço para não colidir com imagem */
-.tl-slide .tl-slidenav-previous,
-.tl-slide .tl-slidenav-next {
-  top: 40%;
-}
-
-/* ======= MOBILE (AJUSTE DE ALTURA DA IMAGEM) ======= */
+/* Adjust spacing only on mobile */
 @media (max-width: 768px) {
   .tl-slide .content-container {
     flex-direction: column;
-    padding: 0 16px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   .tl-text {
@@ -97,15 +56,56 @@
 
   .tl-media-content-container {
     width: 100%;
-    padding: 10px 0 !important;
+    padding: 0 !important;
     text-align: center;
+  }
+
+  .tl-slide-content {
+    padding-bottom: 0 !important;
   }
 
   .tl-media-content-container img,
   .tl-media-content-container video,
   .tl-media-content-container iframe {
-    width: 100%;
-    max-height: 60vh;
-    object-fit: contain;
+    max-height: 60vh !important;
   }
+}
+
+/* Hide flags and timeline navigation */
+.tl-timemarker,
+.tl-timemarker-active,
+.tl-menubar,
+.tl-timenav {
+  display: none !important;
+}
+
+/* Ensure navigation arrows are visible and functional */
+.tl-slidenav-previous,
+.tl-slidenav-next {
+  z-index: 1000 !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  top: 40%;
+}
+
+.tl-slidenav-icon::before {
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* Headline and paragraph styling */
+.tl-headline {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.tl-text-content p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.tl-text-content {
+  margin-bottom: 12px !important;
 }
