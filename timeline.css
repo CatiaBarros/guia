@@ -1,91 +1,99 @@
 @import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
 
-/* Fontes */
+/* === FONTES === */
 .tl-timeline h1,
 .tl-timeline h2,
-.tl-timeline h3,
 .tl-timeline h4,
 .tl-timeline h5,
-.tl-timeline h6 {
-  font-family: 'Blacker Pro', serif !important;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
+.tl-timeline h6,
 .tl-timeline p,
 .tl-timeline .tl-text-content,
 .tl-timeline ul,
 .tl-timeline .tl-caption,
-.tl-timeline .tl-credit {
+.tl-timeline .tl-credit,
+.tl-timeline .tl-slidenav-next,
+.tl-timeline .tl-slidenav-previous,
+.tl-timeline .tl-message,
+.tl-timeline .tl-timegroup-message {
   font-family: 'Blacker Pro', serif !important;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
 }
 
-/* Espaçamento nos textos */
+/* Datas (h3) com Firme */
+.tl-timeline h3.tl-headline-date {
+  font-family: 'Firme', serif !important;
+  font-weight: 700;
+}
+
+/* Números da cronologia com Firme */
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-text h2.tl-headline {
+  font-family: 'Firme', serif !important;
+  font-weight: 700;
+}
+
+/* === ESPAÇAMENTO E LAYOUT === */
 .tl-timeline .tl-text-content-container {
-  padding: 30px;
+  padding: 20px;
 }
 
 .tl-timeline .tl-slide {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  max-height: 750px;
+  overflow: hidden;
 }
 
-/* Ocultar a barra de zoom */
-.tl-menubar {
-  display: none !important;
+/* Divisão imagem/texto */
+.tl-slide .tl-media-content-container {
+  flex: 1 1 45%;
+  overflow: hidden;
+  padding: 0;
+}
+.tl-slide .tl-text-content-container {
+  flex: 1 1 55%;
+  overflow: auto;
+  padding: 20px;
 }
 
-/* Ocultar todos os marcadores da timeline */
+/* Imagens adaptáveis */
+.tl-slide .tl-media img,
+.tl-slide .tl-media iframe,
+.tl-slide .tl-media video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Espaçamento entre eventos na cronologia */
 .tl-timemarker {
-  display: none !important;
+  margin-right: 60px !important;
 }
 
-/* Ajuste de altura da barra de tempo */
+/* === TIMENAV (altura) === */
 .tl-timenav,
 .tl-timenav-background,
 .tl-timenav-outer {
   height: 60px !important;
 }
 
-/* Navegação lateral (setas) */
-.tl-timeline .tl-slidenav-next,
-.tl-timeline .tl-slidenav-previous {
+/* === SETAS DE NAVEGAÇÃO PERSONALIZADAS === */
+.tl-slidenav-next .tl-slidenav-icon::before,
+.tl-slidenav-previous .tl-slidenav-icon::before {
+  color: #8d8d8d !important;
+}
+
+.tl-slidenav-next,
+.tl-slidenav-previous {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 8px;
   border-radius: 8px;
-  font-family: 'Firme', serif;
 }
 
-/* ====== Adaptação da parte de cima para evitar scroll ====== */
-
-/* Limita altura dos slides e evita scroll geral */
-.tl-slide {
-  max-height: 600px;
-  overflow-y: auto;
-}
-
-/* Divide altura entre imagem e texto */
-.tl-slide .tl-media-content-container,
-.tl-slide .tl-text-content-container {
-  max-height: 50%;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Imagens adaptativas */
-.tl-slide .tl-media img,
-.tl-slide .tl-media iframe,
-.tl-slide .tl-media video {
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Texto adaptável e com scroll se necessário */
-.tl-text-content {
-  max-height: 100%;
-  overflow: auto;
+/* === OPCIONAL: esconder zoom, se necessário === */
+.tl-menubar {
+  display: none !important;
 }
