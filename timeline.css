@@ -1,77 +1,88 @@
-/* TimelineJS - Mobile Adjustments and Cleanup */
+/* TimelineJS - Estilo Personalizado com suporte mobile */
 
-/* Reset all paddings/margins that may interfere */
-.tl-slide-content,
+/* === IMPORTAÇÃO DAS FONTES === */
+@import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
+
+/* === FONTES === */
+.tl-timeline h1,
+.tl-timeline h2,
+.tl-timeline h4,
+.tl-timeline h5,
+.tl-timeline h6,
+.tl-timeline ul,
+.tl-timeline .tl-caption,
+.tl-timeline .tl-credit,
+.tl-timeline .tl-message,
+.tl-timeline .tl-timegroup-message {
+  font-family: 'Blacker Pro', serif !important;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.tl-timeline p,
+.tl-timeline .tl-text-content {
+  font-family: 'Blacker Pro', serif !important;
+  font-weight: 400;
+  color: black !important;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.tl-timeline h3.tl-headline-date {
+  font-family: 'Firme', serif !important;
+  font-weight: 700;
+}
+
+/* === LAYOUT DO SLIDE === */
+.tl-slide {
+  padding: 0 !important;
+}
+
+.tl-slide-content {
+  padding: 0 !important;
+}
+
 .tl-slide .content-container {
-  padding: 0 !important;
-  margin: 0 auto !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding-right: 20px;
 }
 
-/* Make sure the media wrapper uses all available width */
+.tl-text {
+  flex: 1.5;
+  padding: 0 !important;
+}
+
 .tl-media-content-container {
-  width: 100% !important;
-  max-height: unset !important;
-  height: auto !important;
+  flex: 1;
   padding: 0 !important;
-  margin: 0 auto;
 }
 
-/* Ensure media scales properly */
+.tl-text-content {
+  margin-bottom: 12px !important;
+}
+
+/* === IMAGEM === */
 .tl-media-content-container img,
 .tl-media-content-container video,
 .tl-media-content-container iframe {
-  width: 100% !important;
-  height: auto !important;
-  max-height: unset !important;
-  object-fit: contain !important;
-  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
   box-shadow: none !important;
   border: none !important;
+  display: block;
 }
 
-/* Remove unwanted shadows below images */
 .tl-media-content-container .media-shadow:before,
 .tl-media-content-container .media-shadow:after {
   display: none !important;
 }
 
-/* Avoid spacing from other wrappers */
-.tl-slide .content-container.layout-text-media .media {
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-/* Adjust spacing only on mobile */
-@media (max-width: 768px) {
-  .tl-slide .content-container {
-    flex-direction: column;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-
-  .tl-text {
-    width: 100%;
-    padding: 0 !important;
-  }
-
-  .tl-media-content-container {
-    width: 100%;
-    padding: 0 !important;
-    text-align: center;
-  }
-
-  .tl-slide-content {
-    padding-bottom: 0 !important;
-  }
-
-  .tl-media-content-container img,
-  .tl-media-content-container video,
-  .tl-media-content-container iframe {
-    max-height: 60vh !important;
-  }
-}
-
-/* Hide flags and timeline navigation */
+/* === REMOVER BANDEIRAS E TIMELINE NAV === */
 .tl-timemarker,
 .tl-timemarker-active,
 .tl-menubar,
@@ -79,7 +90,7 @@
   display: none !important;
 }
 
-/* Ensure navigation arrows are visible and functional */
+/* === SETAS === */
 .tl-slidenav-previous,
 .tl-slidenav-next {
   z-index: 1000 !important;
@@ -93,19 +104,29 @@
   color: rgba(0, 0, 0, 0.2);
 }
 
-/* Headline and paragraph styling */
-.tl-headline {
-  font-size: 2rem;
-  line-height: 2.4rem;
-  margin-bottom: 12px;
-}
+/* === MOBILE === */
+@media (max-width: 768px) {
+  .tl-slide .content-container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
 
-.tl-text-content p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-bottom: 12px;
-}
+  .tl-text {
+    width: 100%;
+    padding: 0 !important;
+  }
 
-.tl-text-content {
-  margin-bottom: 12px !important;
+  .tl-media-content-container {
+    width: 100%;
+    padding: 10px 0 !important;
+    text-align: center;
+  }
+
+  .tl-media-content-container img,
+  .tl-media-content-container video,
+  .tl-media-content-container iframe {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+  }
 }
