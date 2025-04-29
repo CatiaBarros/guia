@@ -34,27 +34,23 @@
   font-weight: 700;
 }
 
-/* Setas */
-.tl-slidenav-next,
-.tl-slidenav-previous {
-  font-family: 'Firme', serif !important;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.tl-slidenav-next .tl-slidenav-icon::before,
-.tl-slidenav-previous .tl-slidenav-icon::before {
-  color: #8d8d8d !important;
-}
-
-/* === SLIDE LAYOUT === */
+/* === SLIDE STRUCTURE === */
 .tl-slide-container {
   height: 90vh !important;
   max-height: 90vh !important;
 }
 
-/* Corrigir espaçamento forçado */
+.tl-timeline .tl-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* Limpar padding/margem do content */
 .tl-slide-content,
 .tl-slide .tl-text,
 .tl-slide .tl-text-content-container,
@@ -72,17 +68,7 @@
   margin-top: 0 !important;
 }
 
-/* Flex layout slide */
-.tl-timeline .tl-slide {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100% !important;
-  max-height: 100% !important;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
+/* Divisão imagem/texto */
 .tl-slide .tl-media-content-container {
   flex: 0 0 auto;
   padding: 0;
@@ -124,7 +110,7 @@
   background: none !important;
 }
 
-/* Legendas e créditos */
+/* Créditos e legendas */
 .tl-slide .tl-media .tl-caption,
 .tl-slide .tl-media .tl-credit {
   display: block !important;
@@ -134,7 +120,33 @@
   text-align: center;
 }
 
-/* === REMOVER NAVEGAÇÃO INFERIOR E FLAGS === */
+/* === SETAS === */
+.tl-slidenav-next,
+.tl-slidenav-previous {
+  background: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  z-index: 10;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+.tl-slidenav-next {
+  right: -40px !important;
+}
+
+.tl-slidenav-previous {
+  left: -40px !important;
+}
+
+.tl-slidenav-icon::before {
+  color: #8d8d8d !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* === REMOVER TIMENAV, FLAGS, ZOOM === */
 .tl-timenav,
 .tl-timenav-outer,
 .tl-timenav-background,
