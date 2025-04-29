@@ -1,7 +1,26 @@
 /* TimelineJS - Estilo Personalizado com suporte mobile */
 
+
 /* === IMPORTAÇÃO DAS FONTES === */
 @import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
+
+/* === FONTES MANUALMENTE CARREGADAS === */
+@font-face {
+  font-family: 'Blacker Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/fonts/BlackerProDis-Rg..woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Blacker Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/fonts/BlackerProDis-Bd..woff2') format('woff2');
+}
+
 
 /* === FONTES === */
 .tl-timeline h1,
