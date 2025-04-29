@@ -34,6 +34,7 @@
   font-weight: 700;
 }
 
+/* Setas */
 .tl-slidenav-next,
 .tl-slidenav-previous {
   font-family: 'Firme', serif !important;
@@ -47,17 +48,23 @@
   color: #8d8d8d !important;
 }
 
-/* === LAYOUT DO SLIDE === */
+/* === SLIDE LAYOUT === */
 .tl-slide-container {
   height: 90vh !important;
   max-height: 90vh !important;
 }
 
+/* Corrigir espaçamento forçado */
 .tl-slide-content,
 .tl-slide .tl-text,
-.tl-slide .tl-text-content-container {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
+.tl-slide .tl-text-content-container,
+.tl-timeline .tl-slide .tl-slide-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.tl-slide-content[style] {
+  padding: 0 !important;
 }
 
 .tl-slide .tl-text-content h2,
@@ -65,6 +72,7 @@
   margin-top: 0 !important;
 }
 
+/* Flex layout slide */
 .tl-timeline .tl-slide {
   display: flex !important;
   flex-direction: column;
@@ -91,7 +99,10 @@
 /* === IMAGENS === */
 .tl-slide .tl-media img,
 .tl-slide .tl-media iframe,
-.tl-slide .tl-media video {
+.tl-slide .tl-media video,
+.tl-media-content .tl-media img,
+.tl-media-content .tl-media iframe,
+.tl-media-content .tl-media video {
   width: 100%;
   height: auto;
   object-fit: scale-down !important;
@@ -99,13 +110,21 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
 }
 
-.tl-media-content {
-  height: auto !important;
-  max-height: 100% !important;
+/* Limpar wrappers também */
+.tl-slide .tl-media-content,
+.tl-slide .tl-media-content-container,
+.tl-slide .tl-media {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
 }
 
+/* Legendas e créditos */
 .tl-slide .tl-media .tl-caption,
 .tl-slide .tl-media .tl-credit {
   display: block !important;
@@ -115,14 +134,19 @@
   text-align: center;
 }
 
-/* === REMOVER NAVEGAÇÃO === */
+/* === REMOVER NAVEGAÇÃO INFERIOR E FLAGS === */
 .tl-timenav,
 .tl-timenav-outer,
 .tl-timenav-background,
-.tl-menubar,
 .tl-timeaxis,
+.tl-menubar,
 .tl-timemarker,
-.tl-timegroup {
+.tl-timemarker-active,
+.tl-timegroup,
+.tl-timemarker-content-container,
+.tl-timemarker-media-container,
+.tl-timeaxis-tick,
+.tl-timeaxis-background {
   display: none !important;
   height: 0 !important;
   visibility: hidden !important;
