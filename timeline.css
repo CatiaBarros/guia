@@ -1,6 +1,6 @@
 @import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
 
-/* === FONTES === */
+/* === FONTES PERSONALIZADAS === */
 .tl-timeline h1,
 .tl-timeline h2,
 .tl-timeline h4,
@@ -16,7 +16,6 @@
   line-height: 1.5;
 }
 
-/* Parágrafos mais escuros */
 .tl-timeline p,
 .tl-timeline .tl-text-content {
   font-family: 'Blacker Pro', serif !important;
@@ -26,18 +25,15 @@
   line-height: 1.4;
 }
 
-/* Parágrafos dentro de .tl-text-content */
 .tl-timeline .tl-slide .tl-text-content p {
   color: black !important;
 }
 
-/* Datas com Firme */
 .tl-timeline h3.tl-headline-date {
   font-family: 'Firme', serif !important;
   font-weight: 700;
 }
 
-/* Setas com Firme */
 .tl-slidenav-next,
 .tl-slidenav-previous {
   font-family: 'Firme', serif !important;
@@ -46,30 +42,23 @@
   border-radius: 8px;
 }
 
-/* Cor das setas */
 .tl-slidenav-next .tl-slidenav-icon::before,
 .tl-slidenav-previous .tl-slidenav-icon::before {
   color: #8d8d8d !important;
 }
 
-/* OCULTAR bandeirinhas */
-.tl-timemarker-content-container {
-  display: none !important;
-}
-
-/* ALTURA FLEXÍVEL DO SLIDE */
+/* === ESTRUTURA E LAYOUT === */
 .tl-slide-container {
   height: 90vh !important;
   max-height: 90vh !important;
 }
 
-/* Ajustes do slide */
 .tl-slide-content {
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
 
-.tl-slide {
+.tl-timeline .tl-slide {
   display: flex !important;
   flex-direction: column;
   justify-content: space-between;
@@ -79,7 +68,6 @@
   margin-bottom: 30px;
 }
 
-/* MEDIA E TEXTO */
 .tl-slide .tl-media-content-container {
   flex: 0 0 auto;
   padding: 0;
@@ -93,7 +81,7 @@
   padding: 20px;
 }
 
-/* Imagem visível e com legendas */
+/* === IMAGENS E LEGENDA === */
 .tl-slide .tl-media img,
 .tl-slide .tl-media iframe,
 .tl-slide .tl-media video {
@@ -101,6 +89,9 @@
   height: auto;
   object-fit: contain !important;
   max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tl-media-content {
@@ -108,9 +99,9 @@
   max-height: 100% !important;
 }
 
-/* Mostrar legendas e créditos */
-.tl-media .tl-caption,
-.tl-media .tl-credit {
+/* Mostrar sempre legenda e crédito */
+.tl-slide .tl-media .tl-caption,
+.tl-slide .tl-media .tl-credit {
   display: block !important;
   font-size: 12px;
   color: #666;
@@ -118,17 +109,15 @@
   text-align: center;
 }
 
-/* Espaçamento entre eventos na timeline */
+/* === TIMELINE NAV === */
 .tl-timemarker {
   margin-right: 60px !important;
 }
 
-/* OCULTAR barra de zoom */
 .tl-menubar {
   display: none !important;
 }
 
-/* ALTURA reduzida da timenav */
 .tl-timenav,
 .tl-timenav-background,
 .tl-timenav-outer {
@@ -137,7 +126,7 @@
 
 /* === MEDIA QUERIES === */
 
-/* MOBILE */
+/* Telemóvel */
 @media (max-width: 767px) {
   .tl-slide {
     flex-direction: column !important;
@@ -157,7 +146,7 @@
   }
 }
 
-/* DESKTOP — mais altura para imagem */
+/* Desktop — mais altura para imagem */
 @media (min-width: 768px) {
   .tl-slide .tl-media-content-container {
     max-height: 50vh;
