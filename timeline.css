@@ -1,118 +1,111 @@
-@import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
-
-/* === FONTES === */
-.tl-timeline h1,
-.tl-timeline h2,
-.tl-timeline h4,
-.tl-timeline h5,
-.tl-timeline h6,
-.tl-timeline ul,
-.tl-timeline .tl-caption,
-.tl-timeline .tl-credit,
-.tl-timeline .tl-message,
-.tl-timeline .tl-timegroup-message {
-  font-family: 'Blacker Pro', serif !important;
-  font-weight: 400;
-  line-height: 1.5;
+/* ======= RESET E BASE ======= */
+.tl-slide {
+  padding: 0 !important;
 }
 
-.tl-timeline p,
-.tl-timeline .tl-text-content {
-  font-family: 'Blacker Pro', serif !important;
-  font-weight: 400;
-  color: black !important;
-  font-size: 16px;
-  line-height: 1.4;
+.tl-slide-content {
+  padding: 0 !important;
 }
 
-/* Datas com Firme */
-.tl-timeline h3.tl-headline-date {
-  font-family: 'Firme', serif !important;
-  font-weight: 700;
-}
-
-/* Setas com Firme */
-.tl-slidenav-next,
-.tl-slidenav-previous {
-  font-family: 'Firme', serif !important;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 8px;
-  border-radius: 8px;
-}
-
-/* Cor das setas */
-.tl-slidenav-next .tl-slidenav-icon::before,
-.tl-slidenav-previous .tl-slidenav-icon::before {
-  color: #8d8d8d !important;
-}
-
-/* === OCULTAR bandeirinhas === */
-.tl-timemarker-content-container {
-  display: none !important;
-}
-
-/* === OCULTAR barra de zoom === */
-.tl-menubar {
-  display: none !important;
-}
-
-/* === ALTURA reduzida da timenav === */
-.tl-timenav,
-.tl-timenav-background,
-.tl-timenav-outer {
-  height: 60px !important;
-}
-
-/* === SLIDE CONFIG GERAL === */
-.tl-slide-container {
-  height: 90vh !important;
-  max-height: 90vh !important;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.tl-timeline .tl-slide {
+/* ======= LAYOUT DO SLIDE (TEXTO + IMAGEM) ======= */
+.tl-slide .content-container {
   display: flex;
-  flex-direction: column;
-  gap: 10px; /* espaço entre texto e imagem */
-  height: 100% !important;
-  max-height: 100% !important;
-  overflow: hidden;
-  margin-bottom: 10px !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding-right: 20px;
 }
 
-/* === TEXTO === */
-.tl-slide .tl-text-content-container {
-  flex: 1 1 auto;
-  overflow: auto;
-  padding: 20px 40px 20px 20px !important; /* mais espaço à direita */
+.tl-text {
+  flex: 1.5;
+  padding: 0 !important;
 }
 
-/* === IMAGEM === */
-.tl-slide .tl-media-content-container {
-  flex: 1 1 auto;
-  max-height: 30vh !important; /* imagem mais "baixa" */
-  overflow: hidden;
-  padding: 10px !important;
+.tl-media-content-container {
+  flex: 1;
+  padding: 0 !important;
 }
 
-/* Imagem visível, sem corte, sem sombra */
-.tl-slide .tl-media img,
-.tl-slide .tl-media iframe,
-.tl-slide .tl-media video {
-  width: 100%;
-  height: 100%;
+/* Reduz distância vertical entre texto e imagem */
+.tl-text-content {
+  margin-bottom: 12px !important;
+}
+
+/* ======= IMAGEM ======= */
+.tl-media-content-container img,
+.tl-media-content-container video,
+.tl-media-content-container iframe {
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
   box-shadow: none !important;
   border: none !important;
 }
 
-/* Remover sombra específica usada em vídeos ou media-wrapper */
-.tl-slide .tl-media-content .tl-media {
-  box-shadow: none !important;
+/* Remove sombras ou efeitos */
+.tl-media-content-container .media-shadow:before,
+.tl-media-content-container .media-shadow:after {
+  display: none !important;
 }
 
-/* === Espaçamento entre eventos na timeline === */
+/* ======= TEXTO ======= */
+.tl-headline {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.tl-text-content p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* ======= REMOVER FLAGS (MARCADORES TEMPORAIS) ======= */
 .tl-timemarker {
-  margin-right: 60px !important;
+  display: none !important;
+}
+
+/* ======= SETAS ======= */
+.tl-slidenav-previous,
+.tl-slidenav-next {
+  z-index: 10;
+}
+
+.tl-slidenav-icon::before {
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* Adiciona espaço para não colidir com imagem */
+.tl-slide .tl-slidenav-previous,
+.tl-slide .tl-slidenav-next {
+  top: 40%;
+}
+
+/* ======= MOBILE (AJUSTE DE ALTURA DA IMAGEM) ======= */
+@media (max-width: 768px) {
+  .tl-slide .content-container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .tl-text {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .tl-media-content-container {
+    width: 100%;
+    padding: 10px 0 !important;
+    text-align: center;
+  }
+
+  .tl-media-content-container img,
+  .tl-media-content-container video,
+  .tl-media-content-container iframe {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+  }
 }
