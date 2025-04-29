@@ -14,16 +14,16 @@
 .tl-timeline .tl-credit,
 .tl-timeline .tl-message,
 .tl-timeline .tl-timegroup-message {
-  font-family: 'Blacker Pro', serif !important;
+  font-family: 'Blacker Pro Display', serif !important;
   font-weight: 400;
   line-height: 1.5;
 }
 
 .tl-timeline p,
 .tl-timeline .tl-text-content {
-  font-family: 'Blacker Pro', serif !important;
+  font-family: 'Blacker Pro Display', serif !important;
   font-weight: 400;
-  color: black !important;
+  color: #565656 !important;
   font-size: 16px;
   line-height: 1.4;
 }
