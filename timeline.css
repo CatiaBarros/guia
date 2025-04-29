@@ -71,6 +71,7 @@
   border: none !important;
   background: transparent !important;
   box-shadow: none !important;
+ max-height: 7px !important;
 }
 
 /* === NAVEGAÇÃO LATERAL (SETAS) === */
