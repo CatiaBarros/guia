@@ -25,10 +25,6 @@
   line-height: 1.4;
 }
 
-.tl-timeline .tl-slide .tl-text-content p {
-  color: black !important;
-}
-
 .tl-timeline h3.tl-headline-date {
   font-family: 'Firme', serif !important;
   font-weight: 700;
@@ -38,6 +34,7 @@
 .tl-slide-container {
   height: 90vh !important;
   max-height: 90vh !important;
+  padding: 20px !important; /* Adiciona espaço geral dentro do slide */
 }
 
 .tl-timeline .tl-slide {
@@ -50,7 +47,7 @@
   margin-bottom: 30px;
 }
 
-/* Limpar padding/margem do content */
+/* Limpar padding/margem dos content internos */
 .tl-slide-content,
 .tl-slide .tl-text,
 .tl-slide .tl-text-content-container,
@@ -59,19 +56,10 @@
   margin: 0 !important;
 }
 
-.tl-slide-content[style] {
-  padding: 0 !important;
-}
-
-.tl-slide .tl-text-content h2,
-.tl-slide .tl-text-content p {
-  margin-top: 0 !important;
-}
-
 /* Divisão imagem/texto */
 .tl-slide .tl-media-content-container {
   flex: 0 0 auto;
-  padding: 0;
+  padding: 20px !important; /* Padding à volta da imagem */
   max-height: 35vh;
   overflow: visible;
 }
@@ -79,7 +67,7 @@
 .tl-slide .tl-text-content-container {
   flex: 1 1 auto;
   overflow: auto;
-  padding: 20px;
+  padding: 40px 20px 40px 20px !important; /* Cima, direita, baixo, esquerda */
 }
 
 /* === IMAGENS === */
@@ -120,7 +108,7 @@
   text-align: center;
 }
 
-/* === SETAS === */
+/* === SETAS VISÍVEIS === */
 .tl-slidenav-next,
 .tl-slidenav-previous {
   background: none !important;
@@ -128,16 +116,6 @@
   filter: none !important;
   backdrop-filter: none !important;
   z-index: 10;
-  top: 50% !important;
-  transform: translateY(-50%);
-}
-
-.tl-slidenav-next {
-  right: -40px !important;
-}
-
-.tl-slidenav-previous {
-  left: -40px !important;
 }
 
 .tl-slidenav-icon::before {
@@ -165,10 +143,6 @@
   pointer-events: none;
 }
 
-.tl-timeline {
-  padding-bottom: 0 !important;
-}
-
 /* === MOBILE === */
 @media (max-width: 767px) {
   .tl-slide {
@@ -186,12 +160,5 @@
 
   .tl-slide .tl-text-content-container p {
     font-size: 15px;
-  }
-}
-
-/* === DESKTOP === */
-@media (min-width: 768px) {
-  .tl-slide .tl-media-content-container {
-    max-height: 50vh;
   }
 }
