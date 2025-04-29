@@ -6,8 +6,6 @@
 .tl-timeline h4,
 .tl-timeline h5,
 .tl-timeline h6,
-.tl-timeline p,
-.tl-timeline .tl-text-content,
 .tl-timeline ul,
 .tl-timeline .tl-caption,
 .tl-timeline .tl-credit,
@@ -16,7 +14,16 @@
   font-family: 'Blacker Pro', serif !important;
   font-weight: 400;
   line-height: 1.5;
+}
+
+/* Parágrafos mais escuros */
+.tl-timeline p,
+.tl-timeline .tl-text-content {
+  font-family: 'Blacker Pro', serif !important;
+  font-weight: 400;
+  color: #1a1a1a !important;
   font-size: 16px;
+  line-height: 1.6;
 }
 
 /* Datas com Firme */
@@ -40,12 +47,12 @@
   color: #8d8d8d !important;
 }
 
-/* === OCULTAR bandeirinhas (flags) da timeline === */
+/* === OCULTAR bandeirinhas === */
 .tl-timemarker-content-container {
   display: none !important;
 }
 
-/* === ALTURA FLEXÍVEL PARA O SLIDE === */
+/* === ALTURA FLEXÍVEL DO SLIDE === */
 .tl-slide-container {
   height: 90vh !important;
   max-height: 90vh !important;
@@ -62,37 +69,37 @@
 
 /* Divisão imagem/texto */
 .tl-slide .tl-media-content-container {
-  flex: 1 1 45%;
+  flex: 1 1 50%;
   overflow: hidden;
   padding: 0;
 }
+
 .tl-slide .tl-text-content-container {
-  flex: 1 1 55%;
+  flex: 1 1 50%;
   overflow: auto;
   padding: 20px;
 }
 
-/* Imagens adaptativas */
+/* Imagem visível, sem corte */
 .tl-slide .tl-media img,
 .tl-slide .tl-media iframe,
 .tl-slide .tl-media video {
   width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain; /* antes era cover, que cortava */
 }
 
-/* Espaçamento entre eventos na linha do tempo */
+/* Espaçamento entre eventos na timeline */
 .tl-timemarker {
   margin-right: 60px !important;
 }
 
-/* === OCULTAR barra de zoom (se necessário) === */
+/* === OCULTAR barra de zoom === */
 .tl-menubar {
   display: none !important;
 }
 
-/* === ALTURA REDUZIDA DA TIMENAV === */
+/* === ALTURA reduzida da timenav === */
 .tl-timenav,
 .tl-timenav-background,
 .tl-timenav-outer {
