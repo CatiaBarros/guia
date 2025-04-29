@@ -1,6 +1,6 @@
 @import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
 
-/* BASE: Títulos com "Firme", texto com "Blacker Pro" */
+/* === FONTES === */
 .tl-timeline h1,
 .tl-timeline h2,
 .tl-timeline h3,
@@ -23,7 +23,7 @@
   font-size: 16px;
 }
 
-/* Ajuste de espaçamento */
+/* === ESPAÇAMENTO === */
 .tl-timeline .tl-text-content-container {
   padding: 30px;
 }
@@ -32,30 +32,48 @@
   margin-bottom: 40px;
 }
 
-/* BARRA DE TEMPO — tornar mais fina */
+/* === BARRA DE TEMPO FINA === */
 .tl-timeline .tl-timenav,
 .tl-timeline .tl-timenav-background,
 .tl-timeline .tl-timenav-outer,
 .tl-timeline .tl-timenav-slider,
 .tl-timeline .tl-timenav-slider-background,
-.tl-timeline .tl-timeaxis,
 .tl-timeline .tl-timenav-line {
   height: 10px !important;
   min-height: 10px !important;
   max-height: 10px !important;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
-/* Esconder marcadores e thumbnails */
+/* === LINHA TEMPORAL DISCRETA === */
+.tl-timeline .tl-timeaxis {
+  height: 2px !important;
+  background-color: #ccc !important;
+  margin-top: 4px !important;
+}
+
+/* === ESCONDER MARCADORES E MINIATURAS === */
 .tl-timeline .tl-timemarker,
-.tl-timeline .tl-timeaxis-background,
-.tl-timeline .tl-timeaxis-tick,
+.tl-timeline .tl-timemarker-content,
+.tl-timeline .tl-timemarker-content-container,
 .tl-timeline .tl-timemarker-media-container,
-.tl-timeline .tl-timemarker-content-container {
+.tl-timeline .tl-timemarker-text,
+.tl-timeline .tl-timemarker-text h2,
+.tl-timeline .tl-timemarker-icon,
+.tl-timeline .tl-timeaxis-background,
+.tl-timeline .tl-timeaxis-tick {
   display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-/* Navegação lateral (setas) */
+/* === NAVEGAÇÃO LATERAL (SETAS) === */
 .tl-timeline .tl-slidenav-next,
 .tl-timeline .tl-slidenav-previous {
   background-color: rgba(0, 0, 0, 0.05);
