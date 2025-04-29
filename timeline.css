@@ -11,8 +11,6 @@
 .tl-timeline ul,
 .tl-timeline .tl-caption,
 .tl-timeline .tl-credit,
-.tl-timeline .tl-slidenav-next,
-.tl-timeline .tl-slidenav-previous,
 .tl-timeline .tl-message,
 .tl-timeline .tl-timegroup-message {
   font-family: 'Blacker Pro', serif !important;
@@ -33,6 +31,20 @@
   font-weight: 700;
 }
 
+/* === SETAS DE NAVEGAÇÃO === */
+.tl-slidenav-next,
+.tl-slidenav-previous {
+  font-family: 'Firme', serif !important;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.tl-slidenav-next .tl-slidenav-icon::before,
+.tl-slidenav-previous .tl-slidenav-icon::before {
+  color: #8d8d8d !important;
+}
+
 /* === ESPAÇAMENTO E LAYOUT === */
 .tl-timeline .tl-text-content-container {
   padding: 20px;
@@ -42,8 +54,15 @@
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  max-height: 750px;
+  height: 100% !important;
+  max-height: 100% !important;
   overflow: hidden;
+}
+
+/* Container geral do slide com altura aumentada */
+.tl-slide-container {
+  height: 800px !important;
+  max-height: 800px !important;
 }
 
 /* Divisão imagem/texto */
@@ -52,13 +71,14 @@
   overflow: hidden;
   padding: 0;
 }
+
 .tl-slide .tl-text-content-container {
   flex: 1 1 55%;
   overflow: auto;
   padding: 20px;
 }
 
-/* Imagens adaptáveis */
+/* Imagens adaptativas */
 .tl-slide .tl-media img,
 .tl-slide .tl-media iframe,
 .tl-slide .tl-media video {
@@ -80,20 +100,7 @@
   height: 60px !important;
 }
 
-/* === SETAS DE NAVEGAÇÃO PERSONALIZADAS === */
-.tl-slidenav-next .tl-slidenav-icon::before,
-.tl-slidenav-previous .tl-slidenav-icon::before {
-  color: #8d8d8d !important;
-}
-
-.tl-slidenav-next,
-.tl-slidenav-previous {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 8px;
-  border-radius: 8px;
-}
-
-/* === OPCIONAL: esconder zoom, se necessário === */
+/* === OCULTAR barra de zoom === */
 .tl-menubar {
   display: none !important;
 }
