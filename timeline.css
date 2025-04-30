@@ -3,11 +3,22 @@
 /* === IMPORTAÇÃO DAS FONTES === */
 @import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
 
-/* === TIPOGRAFIA DO TÍTULO DA DATA === */
+
+/* Tipografia do título da data */
 .tl-timeline h3.tl-headline-date {
   font-family: 'Firme', serif !important;
   font-weight: 700;
 }
+
+/* Cor azul apenas para o texto principal (hora), mantendo o small intacto */
+.tl-timeline h3.tl-headline-date {
+  color: #015782;
+}
+
+.tl-timeline h3.tl-headline-date small {
+  color: inherit; /* ou defina a cor que estava, se for diferente */
+}
+
 
 /* === REMOVER BANDEIRAS E TIMELINE NAV === */
 .tl-timemarker,
