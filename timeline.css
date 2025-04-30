@@ -26,10 +26,4 @@
   display: block !important; /* Importante: para aplicar altura zero sem ocultar totalmente */
 }
 
-/* Ocupa quase toda a altura da viewport */
-.tl-slide-content {
-  height: 98vh !important;
-  max-height: 98vh !important;
-  overflow: auto; /* Caso o conteúdo ultrapasse os limites */
-}
 
