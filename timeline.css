@@ -38,6 +38,12 @@
   padding: 40px !important;
   box-sizing: border-box !important;
 }
+/* Manter apenas o padding-right */
+.tl-text-content-container {
+  padding: 0 !important;
+  padding-right: 10px !important;
+}
+
 
 /* Padding reduzido em ecrãs pequenos (mobile) */
 @media (max-width: 600px) {
