@@ -33,8 +33,6 @@
 } 
 .tl-slide-content .tl-text {
   padding: 40px !important;
-  box-sizing: border-box !important;
-  background: rgba(255, 0, 0, 0.1); /* apenas para debug */
 }
 
 /* === IMAGENS COM OBJECT-FIT PARA EVITAR ESTICAMENTO === */
