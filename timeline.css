@@ -51,54 +51,6 @@
   font-weight: 700;
 }
 
-/* === LAYOUT DO SLIDE === */
-.tl-slide {
-  padding: 0 !important;
-}
-
-.tl-slide-content {
-  padding: 0 !important;
-}
-
-.tl-slide .content-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding-right: 25px;
-}
-
-.tl-text {
-  flex: 1.5;
-  padding: 0 !important;
-}
-
-.tl-media-content-container {
-  flex: 1;
-  padding: 0 !important;
-}
-
-.tl-text-content {
-  margin-bottom: 8px !important;
-}
-
-/* === IMAGEM === */
-.tl-media-content-container img,
-.tl-media-content-container video,
-.tl-media-content-container iframe {
-  max-width: 90%;
-  height: auto;
-  object-fit: scale-down;
-  box-shadow: none !important;
-  border: none !important;
-  display: block;
-}
-
-.tl-media-content-container .media-shadow:before,
-.tl-media-content-container .media-shadow:after {
-  display: none !important;
-}
 
 /* === REMOVER BANDEIRAS E TIMELINE NAV === */
 .tl-timemarker,
@@ -108,42 +60,4 @@
   display: none !important;
 }
 
-/* === SETAS === */
-.tl-slidenav-previous,
-.tl-slidenav-next {
-  z-index: 1000 !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
 
-.tl-slidenav-icon::before {
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-/* === MOBILE === */
-@media (max-width: 768px) {
-  .tl-slide .content-container {
-    flex-direction: column;
-    padding: 0 16px;
-  }
-
-  .tl-text {
-    width: 100%;
-    padding: 0 !important;
-  }
-
-  .tl-media-content-container {
-    width: 100%;
-    padding: 10px 0 !important;
-    text-align: center;
-  }
-
-  .tl-media-content-container img,
-  .tl-media-content-container video,
-  .tl-media-content-container iframe {
-    width: 100%;
-    max-height: 40vh;
-    object-fit: contain;
-  }
-}
