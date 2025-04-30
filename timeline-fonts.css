@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Blacker Pro Display';
+  src: url('https://catiabarros.github.io/guia//fonts/BlackerWoff/Woff2/Zetafonts%20-%20Blacker%20Pro%20Display%20Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tl-timeline h1,
+.tl-timeline h2,
+.tl-timeline h3,
+.tl-timeline h4,
+.tl-timeline h5,
+.tl-timeline h6,
+.tl-timeline p,
+.tl-timeline ul,
+.tl-timeline .tl-caption,
+.tl-timeline .tl-credit,
+.tl-timeline .tl-message,
+.tl-timeline .tl-timegroup-message,
+.tl-timeline .tl-text-content {
+  font-family: 'Blacker Pro Display', serif !important;
+}
