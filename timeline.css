@@ -36,7 +36,16 @@
 .tl-media {
   margin-top: 4px !important;
 }
-/* === REMOVER SOMBRA DAS IMAGENS === */
+
+/* === REMOVER EFEITO DE SOMBRA DAS IMAGENS === */
 .tl-media-shadow {
-  display: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+
+/* === TÍTULO DA DATA EM MAIÚSCULAS === */
+.tl-timeline h3.tl-headline-date,
+.tl-timeline h3.tl-headline-date small {
+  text-transform: uppercase !important;
 }
