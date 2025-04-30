@@ -24,13 +24,24 @@
   display: block !important; /* Para manter a altura zero sem ocultar completamente */
 }
 
-/* === FORÇAR SLIDES A OCUPAREM 100% DA ALTURA 
+/* === FORÇAR SLIDES A OCUPAREM 100% DA ALTURA === */
 .tl-storyslider {
   height: 100vh !important;
   max-height: 100vh !important;
   display: flex !important;
   flex-direction: column;
-} === */
+} 
+/* === PADDING NO CONTEÚDO DO SLIDE === */
+.tl-slide-content {
+  padding: 40px !important;
+}
+/* === IMAGENS COM OBJECT-FIT PARA EVITAR ESTICAMENTO === */
+.tl-media img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 
 /* === MARGEM SUPERIOR PARA MEDIA === */
 .tl-media {
