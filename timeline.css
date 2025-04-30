@@ -9,7 +9,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./fonts/Blacker Woff/WOFF2/BlackerProDis-Rg.woff2') format('woff2');
+  src: url('/fonts/BlackerWoff/Woff2/Zetafonts - Blacker Pro Display Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('./fonts/Blacker Woff/WOFF2/BlackerProDis-Bd.woff2') format('woff2');
+  src: url('/fonts/BlackerWoff/Woff2/Zetafonts - Blacker Pro Display Bold.woff2') format('woff2');
 }
 
 
