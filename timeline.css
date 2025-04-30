@@ -31,10 +31,22 @@
   display: flex !important;
   flex-direction: column;
 } 
+
+/* Padding padrão (desktop) */
+.tl-slide-content .tl-text,
 .tl-slide-content .tl-media {
   padding: 40px !important;
   box-sizing: border-box !important;
 }
+
+/* Padding reduzido em ecrãs pequenos (mobile) */
+@media (max-width: 600px) {
+  .tl-slide-content .tl-text,
+  .tl-slide-content .tl-media {
+    padding: 20px !important;
+  }
+}
+
 
 /* === IMAGENS COM OBJECT-FIT PARA EVITAR ESTICAMENTO === */
 .tl-media img {
