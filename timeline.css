@@ -1,15 +1,13 @@
 /* TimelineJS - Estilo Personalizado com suporte mobile */
 
-
 /* === IMPORTAÇÃO DAS FONTES === */
 @import url('https://statics.impresa.pt/generic-site-assets/expresso/active/styles/styles.css');
 
-
+/* === TIPOGRAFIA DO TÍTULO DA DATA === */
 .tl-timeline h3.tl-headline-date {
   font-family: 'Firme', serif !important;
   font-weight: 700;
 }
-
 
 /* === REMOVER BANDEIRAS E TIMELINE NAV === */
 .tl-timemarker,
@@ -23,7 +21,18 @@
   padding: 0 !important;
   margin: 0 !important;
   border: none !important;
-  display: block !important; /* Importante: para aplicar altura zero sem ocultar totalmente */
+  display: block !important; /* Para manter a altura zero sem ocultar completamente */
 }
 
+/* === FORÇAR SLIDES A OCUPAREM 100% DA ALTURA === */
+.tl-storyslider {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column;
+}
 
+/* === MARGEM SUPERIOR PARA MEDIA === */
+.tl-media {
+  margin-top: 4px !important;
+}
