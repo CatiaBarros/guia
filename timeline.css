@@ -24,13 +24,13 @@
   display: block !important; /* Para manter a altura zero sem ocultar completamente */
 }
 
-/* === FORÇAR SLIDES A OCUPAREM 100% DA ALTURA === */
+/* === FORÇAR SLIDES A OCUPAREM 100% DA ALTURA 
 .tl-storyslider {
   height: 100vh !important;
   max-height: 100vh !important;
   display: flex !important;
   flex-direction: column;
-}
+} === */
 
 /* === MARGEM SUPERIOR PARA MEDIA === */
 .tl-media {
