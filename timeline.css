@@ -36,3 +36,7 @@
 .tl-media {
   margin-top: 4px !important;
 }
+/* === REMOVER SOMBRA DAS IMAGENS === */
+.tl-media-shadow {
+  display: none !important;
+}
