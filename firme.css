@@ -1,7 +1,41 @@
+/* Firme (Latinotype) - webfonts para Flourish */
+/* Peso normal = Book (400). 7 pesos + italicos. */
+
 @font-face {
   font-family: 'Firme';
-  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Regular.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Regular.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Book.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,8 +43,72 @@
 
 @font-face {
   font-family: 'Firme';
-  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Bold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-BookItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-ExtraBoldItalic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Firme';
+  src: url('https://cdn.jsdelivr.net/gh/CatiaBarros/guia@main/fonts/Firme-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
   font-display: swap;
 }
